@@ -12,10 +12,10 @@ namespace JobService.V1.Models
         public string JobTitle { get; set; }
 
         [Required]
-        public string? SkillSet { get; set; }
+        public string SkillSet { get; set; }
 
         [Required]
-        public string? YearOfExp { get; set; }
+        public string YearOfExp { get; set; }
 
         public string? Qualification { get; set; }
 
@@ -29,8 +29,6 @@ namespace JobService.V1.Models
         public string? Location { get; set; }
 
         public DateTime PostedOn { get; set; }
-
-        public DateTime CreatedOn { get; set; }
 
         public DateTime UpdatedOn { get; set; }
 
