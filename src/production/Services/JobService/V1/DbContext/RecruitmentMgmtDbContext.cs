@@ -1,8 +1,8 @@
-﻿using JobService.V1.Models;
+﻿using OpenPositionService.V1.Models;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace JobService
+namespace OpenPositionService
 {
     public class RecruitmentMgmtDbContext : DbContext
     {
@@ -12,13 +12,14 @@ namespace JobService
         }
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<Job>(entity => {
+            builder.Entity<OpenPosition>(entity =>
+            {
                 entity.HasIndex(e => e.JobId).IsUnique();
-                
+
             });
         }
 
-        public DbSet<Job> jobs { get; set; }
+        public DbSet<OpenPosition> openPositions { get; set; }
     }
 
 }

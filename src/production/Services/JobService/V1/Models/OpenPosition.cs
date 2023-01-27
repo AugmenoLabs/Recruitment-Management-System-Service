@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace JobService.V1.Models
+namespace OpenPositionService.V1.Models
 {
-    public class Job
+    public class OpenPosition
     {
         public long JobId { get; set; }
 
@@ -28,12 +28,16 @@ namespace JobService.V1.Models
         //County-State-City
         public string? Location { get; set; }
 
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime PostedOn { get; set; }
 
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime UpdatedOn { get; set; }
 
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public string CreatedBy { get; set; }
 
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public string UpdatedBy { get; set; }
 
 

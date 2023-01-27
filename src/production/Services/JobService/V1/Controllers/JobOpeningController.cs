@@ -1,8 +1,8 @@
-﻿using JobService.V1.Models;
+﻿using OpenPositionService.V1.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace JobService.V1.Controllers
+namespace OpenPositionService.V1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -16,39 +16,41 @@ namespace JobService.V1.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetJobOpenings()
+        public async Task<IActionResult> GetJobs()
         {
-            return Ok(await _context.jobs.ToListAsync());
+            return Ok(await _context.openPositions.ToListAsync());
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddJobOpenings(Job job)
+        public async Task<IActionResult> AddJobs(OpenPosition job)
         {
-            _context.jobs.Add(job);
+            _context.openPositions.Add(job);
             await _context.SaveChangesAsync();
             return Created($"/get-job-by-id?id={job.JobId}",job);
         }
 
-        [HttpGet("{id}", Name = "GetJob")]
-        public async Task<IActionResult> GetJobOpening(string id)
+        [HttpGet]
+        [Route("{id:guid}")]
+        public async Task<IActionResult> GetJob([FromRoute] Guid id)
         {
-            var job = await _context.jobs.FindAsync(id);
+            var job = await _context.openPositions.FindAsync(id);
             if (job == null) return NotFound();
             return Ok(job);
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateJobOpening(Job job)
+        public async Task<IActionResult> UpdateJob(OpenPosition job)
         {
-            _context.jobs.Update(job);
+            _context.openPositions.Update(job);
             await _context.SaveChangesAsync();
             return NoContent();
         }
 
-        [HttpDelete("{id}", Name = "DeleteJob")]
-        public async Task<IActionResult> DeleteJobOpenings(string id)
+        [HttpDelete]
+        [Route("{id:guid}")]
+        public async Task<IActionResult> DeleteJobs([FromRoute] Guid id)
         {
-            var job = await _context.jobs.FindAsync(id);
+            var job = await _context.openPositions.FindAsync(id);
             if(job != null)
             {
                 _context.Remove(job);

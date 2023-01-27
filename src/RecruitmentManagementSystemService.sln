@@ -5,13 +5,13 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "production", "production", "{9D983AED-981A-44DA-9402-9DC77A5AE565}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway", "production\ApiGateway\ApiGateway.csproj", "{B146FD51-21BF-4DC2-8CE8-77DE458AD795}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway", "production\ApiGateway\ApiGateway.csproj", "{B146FD51-21BF-4DC2-8CE8-77DE458AD795}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{3F30AFA8-8125-44EC-8BD6-B6482A8B3912}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobService", "production\Services\JobService\JobService.csproj", "{21CF1E9B-0770-45C3-BD5C-B794D21AC2E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenPositionService", "production\Services\JobService\OpenPositionService.csproj", "{21CF1E9B-0770-45C3-BD5C-B794D21AC2E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterviewService", "production\Services\InterviewService\InterviewService.csproj", "{90AB86B7-BCE5-45FC-A928-202BAA05982F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterviewService", "production\Services\InterviewService\InterviewService.csproj", "{90AB86B7-BCE5-45FC-A928-202BAA05982F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

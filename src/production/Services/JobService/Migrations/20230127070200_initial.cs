@@ -3,16 +3,16 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace JobService.V1.Migrations
+namespace OpenPositionService.Migrations
 {
     /// <inheritdoc />
-    public partial class CreatedJobSchema : Migration
+    public partial class initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "jobs",
+                name: "openPositions",
                 columns: table => new
                 {
                     JobTitle = table.Column<string>(type: "text", nullable: false),
@@ -30,12 +30,12 @@ namespace JobService.V1.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_jobs", x => x.JobTitle);
+                    table.PrimaryKey("PK_openPositions", x => x.JobTitle);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_jobs_JobId",
-                table: "jobs",
+                name: "IX_openPositions_JobId",
+                table: "openPositions",
                 column: "JobId",
                 unique: true);
         }
@@ -44,7 +44,7 @@ namespace JobService.V1.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "jobs");
+                name: "openPositions");
         }
     }
 }
