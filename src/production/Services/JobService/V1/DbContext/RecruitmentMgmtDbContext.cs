@@ -18,7 +18,7 @@ namespace JobService
             });
         }
 
-        public DbSet<Job> Jobs { get; set; }
+        public DbSet<Job> jobs { get; set; }
     }
 
 }

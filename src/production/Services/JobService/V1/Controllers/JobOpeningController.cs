@@ -16,22 +16,21 @@ namespace JobService.V1.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetJobs()
+        public async Task<IActionResult> GetJobOpenings()
         {
             return Ok(await _context.jobs.ToListAsync());
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddJobs(Job job)
+        public async Task<IActionResult> AddJobOpenings(Job job)
         {
             _context.jobs.Add(job);
             await _context.SaveChangesAsync();
             return Created($"/get-job-by-id?id={job.JobId}",job);
         }
 
-        [HttpGet]
-        [Route("{id:guid}")]
-        public async Task<IActionResult> GetJob([FromRoute] Guid id)
+        [HttpGet("{id}", Name = "GetJob")]
+        public async Task<IActionResult> GetJobOpening(string id)
         {
             var job = await _context.jobs.FindAsync(id);
             if (job == null) return NotFound();
@@ -39,16 +38,15 @@ namespace JobService.V1.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateJob(Job job)
+        public async Task<IActionResult> UpdateJobOpening(Job job)
         {
             _context.jobs.Update(job);
             await _context.SaveChangesAsync();
             return NoContent();
         }
 
-        [HttpDelete]
-        [Route("{id:guid}")]
-        public async Task<IActionResult> DeleteJobs([FromRoute] Guid id)
+        [HttpDelete("{id}", Name = "DeleteJob")]
+        public async Task<IActionResult> DeleteJobOpenings(string id)
         {
             var job = await _context.jobs.FindAsync(id);
             if(job != null)
