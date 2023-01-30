@@ -5,11 +5,11 @@ using OpenPositionService.V1.Models;
 
 namespace OpenPositionService.V1.Services
 {
-    public class OpenPositionServiceClass : IOpenPositionService
+    public class OpenPositionServices : IOpenPositionService
     {
         private readonly RecruitmentMgmtDbContext _context;
 
-        public OpenPositionServiceClass(RecruitmentMgmtDbContext context)
+        public OpenPositionServices(RecruitmentMgmtDbContext context)
         {
             _context = context;
         }
