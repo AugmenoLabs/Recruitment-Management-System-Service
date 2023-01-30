@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace InterviewService.Controllers
+namespace CandidateProfileStatus.Controllers
 {
     [ApiController]
     [Route("[controller]")]

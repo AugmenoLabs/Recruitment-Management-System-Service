@@ -1,4 +1,4 @@
-namespace InterviewService
+namespace CandidateProfileStatus
 {
     public class WeatherForecast
     {
