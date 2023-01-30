@@ -1,20 +1,19 @@
-﻿using Microsoft.EntityFrameworkCore;
-using OpenPositionService.V1.Helpers;
+﻿using OpenPositionService.V1.Helpers;
 using OpenPositionService.V1.Interfaces;
 using OpenPositionService.V1.Models;
 
 namespace OpenPositionService.V1.Services
 {
-    public class OpenPositionService : IOpenPositionService
+    public class OpenPositionServices : IOpenPositionService
     {
         private readonly RecruitmentMgmtDbContext _context;
 
-        public OpenPositionService(RecruitmentMgmtDbContext context)
+        public OpenPositionServices(RecruitmentMgmtDbContext context)
         {
             _context = context;
         }
 
-        public OpenPositionService()
+        public OpenPositionServices()
         {
         }
 

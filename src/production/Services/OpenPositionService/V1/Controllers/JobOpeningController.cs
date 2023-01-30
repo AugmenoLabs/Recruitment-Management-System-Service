@@ -37,8 +37,6 @@ namespace OpenPositionService.V1.Controllers
             return Ok(new { message = "JobPosition Created" });
         }
 
-
-
         [HttpPut("{id}")]
         public IActionResult UpdateOpenPosition(int id, OpenPosition job)
         {
