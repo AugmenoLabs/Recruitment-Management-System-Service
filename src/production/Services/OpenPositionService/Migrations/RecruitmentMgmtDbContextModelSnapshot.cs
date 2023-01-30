@@ -74,7 +74,7 @@ namespace OpenPositionService.Migrations
                     b.HasIndex("JobId")
                         .IsUnique();
 
-                    b.ToTable("openPositions");
+                    b.ToTable("OpenPositions");
                 });
 #pragma warning restore 612, 618
         }

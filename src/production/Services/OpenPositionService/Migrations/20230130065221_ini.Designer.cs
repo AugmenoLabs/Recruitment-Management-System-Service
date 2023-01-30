@@ -12,8 +12,8 @@ using OpenPositionService;
 namespace OpenPositionService.Migrations
 {
     [DbContext(typeof(RecruitmentMgmtDbContext))]
-    [Migration("20230127070200_initial")]
-    partial class initial
+    [Migration("20230130065221_ini")]
+    partial class ini
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -77,7 +77,7 @@ namespace OpenPositionService.Migrations
                     b.HasIndex("JobId")
                         .IsUnique();
 
-                    b.ToTable("openPositions");
+                    b.ToTable("OpenPositions");
                 });
 #pragma warning restore 612, 618
         }

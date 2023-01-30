@@ -22,22 +22,19 @@ namespace OpenPositionService.V1.Models
         [Required]
         public string JobDescription { get; set; }
 
-        [Range(1, int.MaxValue)]
+    
         public int NoOfPositions { get; set; }
 
         //County-State-City
         public string? Location { get; set; }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime PostedOn { get; set; }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime UpdatedOn { get; set; }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+
         public string CreatedBy { get; set; }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public string UpdatedBy { get; set; }
 
     }

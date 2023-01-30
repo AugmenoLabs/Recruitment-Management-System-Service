@@ -6,13 +6,13 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace OpenPositionService.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class ini : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "openPositions",
+                name: "OpenPositions",
                 columns: table => new
                 {
                     JobTitle = table.Column<string>(type: "text", nullable: false),
@@ -30,12 +30,12 @@ namespace OpenPositionService.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_openPositions", x => x.JobTitle);
+                    table.PrimaryKey("PK_OpenPositions", x => x.JobTitle);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_openPositions_JobId",
-                table: "openPositions",
+                name: "IX_OpenPositions_JobId",
+                table: "OpenPositions",
                 column: "JobId",
                 unique: true);
         }
@@ -44,7 +44,7 @@ namespace OpenPositionService.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "openPositions");
+                name: "OpenPositions");
         }
     }
 }
