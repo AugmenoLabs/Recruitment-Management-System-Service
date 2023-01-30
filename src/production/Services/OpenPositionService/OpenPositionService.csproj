@@ -22,8 +22,7 @@
 
   <ItemGroup>
     <Folder Include="V1\Controllers\" />
-    <Folder Include="V1\Interfaces\" />
-    <Folder Include="V1\Services\" />
+    <Folder Include="V1\Migrations\" />
   </ItemGroup>
 
 </Project>

@@ -1,63 +1,56 @@
 ﻿using OpenPositionService.V1.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using OpenPositionService.V1.Interfaces;
 
 namespace OpenPositionService.V1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class JobOpeningController : Controller
+    public class JobOpeningController : ControllerBase
     {
-        private readonly RecruitmentMgmtDbContext _context;
+        private IOpenPositionService _openPositionService;
 
-        public JobOpeningController(RecruitmentMgmtDbContext context)
+        public JobOpeningController(IOpenPositionService openPositionService)
         {
-            _context = context;
+            _openPositionService = openPositionService;
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetOpenPositions()
+        public IActionResult GetAllOpenPositions()
         {
-            return Ok(await _context.OpenPositions.ToListAsync());
+            var jobOpenings = _openPositionService.GetAllOpenPositions();
+            return Ok(jobOpenings);
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetOpenPositionById(int id)
+        {
+            var jobOpening = _openPositionService.GetOpenPositionById(id);
+            return Ok(jobOpening);
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddOpenPositions(OpenPosition job)
+        public IActionResult CreateOpenPositions(OpenPosition job)
         {
-            _context.OpenPositions.Add(job);
-            await _context.SaveChangesAsync();
-            return Created($"/get-job-by-id?id={job.JobId}", job);
+            _openPositionService.CreateOpenPositions(job);
+            return Ok(new { message = "JobPosition Created" });
         }
 
-        [HttpGet]
-        [Route("{id:guid}")]
-        public async Task<IActionResult> GetOpenPosition([FromRoute] Guid id)
+
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateOpenPosition(int id, OpenPosition job)
         {
-            var job = await _context.OpenPositions.FindAsync(id);
-            if (job == null) return NotFound();
-            return Ok(job);
+            _openPositionService.UpdateOpenPositions(id, job);
+            return Ok(new { message = "JobPosition Updated" });
         }
 
-        [HttpPut]
-        public async Task<IActionResult> UpdateOpenPosition(OpenPosition job)
+        [HttpDelete("{id}")]
+        public IActionResult DeleteOpenPosition(int id)
         {
-            _context.OpenPositions.Update(job);
-            await _context.SaveChangesAsync();
-            return NoContent();
-        }
-
-        [HttpDelete]
-        [Route("{id:guid}")]
-        public async Task<IActionResult> DeleteOpenPosition([FromRoute] Guid id)
-        {
-            var job = await _context.OpenPositions.FindAsync(id);
-            if (job != null)
-            {
-                _context.Remove(job);
-                _context.SaveChanges();
-                return Ok(job);
-            }
-            return NotFound();
+            _openPositionService.DeleteOpenPosition(id);
+            return Ok(new { message = "User Deleted" });
         }
     }
 }
