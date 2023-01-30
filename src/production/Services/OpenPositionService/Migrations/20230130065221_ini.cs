@@ -30,7 +30,7 @@ namespace OpenPositionService.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_OpenPositions", x => x.JobTitle);
+                    table.PrimaryKey("PK_OpenPositions", x => x.JobId);
                 });
 
             migrationBuilder.CreateIndex(

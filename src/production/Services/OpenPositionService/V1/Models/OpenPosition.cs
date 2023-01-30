@@ -5,23 +5,16 @@ namespace OpenPositionService.V1.Models
 {
     public class OpenPosition
     {
-        private long _id;
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public long JobId
-        {
-            get
-            {
-                return _id;
-            }
-            set
-            {
-                _id = Convert.ToInt64(DateTime.Now.ToString("yyyyMMddHHmmss"));
-            }
-        }
+        public long JobId { get; set; }
 
         public string JobTitle { get; set; }
+
+        public string AccountName { get; set; }
+
+        public string TeamName { get; set; }
 
         [Required]
         public string SkillSet { get; set; }
