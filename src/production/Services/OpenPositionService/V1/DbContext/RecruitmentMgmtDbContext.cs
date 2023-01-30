@@ -14,7 +14,7 @@ namespace OpenPositionService
         {
             builder.Entity<OpenPosition>(entity =>
             {
-                entity.HasIndex(e => e.JobId).IsUnique();
+                entity.HasIndex(e => e.JobTitle).IsUnique();
 
             });
         }
