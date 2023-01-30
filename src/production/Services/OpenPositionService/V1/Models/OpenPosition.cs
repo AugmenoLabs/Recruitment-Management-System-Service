@@ -5,10 +5,22 @@ namespace OpenPositionService.V1.Models
 {
     public class OpenPosition
     {
-        public long JobId { get; set; }
+        private long _id;
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public long JobId
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                _id = Convert.ToInt64(DateTime.Now.ToString("yyyyMMddHHmmss"));
+            }
+        }
+
         public string JobTitle { get; set; }
 
         [Required]
@@ -22,7 +34,7 @@ namespace OpenPositionService.V1.Models
         [Required]
         public string JobDescription { get; set; }
 
-    
+
         public int NoOfPositions { get; set; }
 
         //County-State-City
