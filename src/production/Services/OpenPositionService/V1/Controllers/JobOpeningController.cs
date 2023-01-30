@@ -24,7 +24,7 @@ namespace OpenPositionService.V1.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetOpenPositionById(int id)
+        public IActionResult GetOpenPositionById(long id)
         {
             var jobOpening = _openPositionService.GetOpenPositionById(id);
             return Ok(jobOpening);
@@ -40,14 +40,14 @@ namespace OpenPositionService.V1.Controllers
 
 
         [HttpPut("{id}")]
-        public IActionResult UpdateOpenPosition(int id, OpenPosition job)
+        public IActionResult UpdateOpenPosition(long id, OpenPosition job)
         {
             _openPositionService.UpdateOpenPositions(id, job);
             return Ok(new { message = "JobPosition Updated" });
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteOpenPosition(int id)
+        public IActionResult DeleteOpenPosition(long id)
         {
             _openPositionService.DeleteOpenPosition(id);
             return Ok(new { message = "User Deleted" });

@@ -1,6 +1,7 @@
 using OpenPositionService;
 using Microsoft.EntityFrameworkCore;
 using OpenPositionService.V1.Interfaces;
+using OpenPositionService.V1.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +13,7 @@ builder.Services.AddDbContext<RecruitmentMgmtDbContext>(options => options.UseNp
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<IOpenPositionService, OpenPositionService>();
+builder.Services.AddScoped<IOpenPositionService, OpenPositionServiceClass>();
 
 var app = builder.Build();
 

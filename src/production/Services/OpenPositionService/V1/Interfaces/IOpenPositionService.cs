@@ -5,9 +5,9 @@ namespace OpenPositionService.V1.Interfaces
     public interface IOpenPositionService
     {
         IEnumerable<OpenPosition> GetAllOpenPositions();
-        OpenPosition GetOpenPositionById(int id);
+        OpenPosition GetOpenPositionById(long id);
         void CreateOpenPositions(OpenPosition job);
-        void UpdateOpenPositions(int id, OpenPosition job);
-        void DeleteOpenPosition(int id);
+        void UpdateOpenPositions(long id, OpenPosition job);
+        void DeleteOpenPosition(long id);
     }
 }

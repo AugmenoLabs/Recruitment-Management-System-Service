@@ -5,17 +5,13 @@ using OpenPositionService.V1.Models;
 
 namespace OpenPositionService.V1.Services
 {
-    public class OpenPositionService : IOpenPositionService
+    public class OpenPositionServiceClass : IOpenPositionService
     {
         private readonly RecruitmentMgmtDbContext _context;
 
-        public OpenPositionService(RecruitmentMgmtDbContext context)
+        public OpenPositionServiceClass(RecruitmentMgmtDbContext context)
         {
             _context = context;
-        }
-
-        public OpenPositionService()
-        {
         }
 
         public IEnumerable<OpenPosition> GetAllOpenPositions()
@@ -23,7 +19,7 @@ namespace OpenPositionService.V1.Services
             return _context.OpenPositions;
         }
 
-        public OpenPosition GetOpenPositionById(int id)
+        public OpenPosition GetOpenPositionById(long id)
         {
             return getOpenPosition(id);
         }
@@ -38,8 +34,8 @@ namespace OpenPositionService.V1.Services
             _context.OpenPositions.Add(job);
             _context.SaveChanges();
         }
-
-        public void UpdateOpenPositions(int id, OpenPosition job)
+        
+        public void UpdateOpenPositions(long id, OpenPosition job)
         {
             var jobOpening = getOpenPosition(id);
 
@@ -49,14 +45,14 @@ namespace OpenPositionService.V1.Services
             _context.SaveChanges();
         }
 
-        public void DeleteOpenPosition(int id)
+        public void DeleteOpenPosition(long id)
         {
             var jobOpening = getOpenPosition(id);
             _context.OpenPositions.Remove(jobOpening);
             _context.SaveChanges();
         }
 
-        private OpenPosition getOpenPosition(int id)
+        private OpenPosition getOpenPosition(long id)
         {
             var openPosition = _context.OpenPositions.Find(id);
             if (openPosition == null) throw new KeyNotFoundException("Open Position Not Found");
