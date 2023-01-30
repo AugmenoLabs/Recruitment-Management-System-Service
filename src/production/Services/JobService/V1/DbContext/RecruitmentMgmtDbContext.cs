@@ -19,7 +19,7 @@ namespace OpenPositionService
             });
         }
 
-        public DbSet<OpenPosition> openPositions { get; set; }
+        public DbSet<OpenPosition> OpenPositions { get; set; }
     }
 
 }

@@ -11,8 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{3F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenPositionService", "production\Services\JobService\OpenPositionService.csproj", "{21CF1E9B-0770-45C3-BD5C-B794D21AC2E0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterviewService", "production\Services\InterviewService\InterviewService.csproj", "{90AB86B7-BCE5-45FC-A928-202BAA05982F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,10 +25,6 @@ Global
 		{21CF1E9B-0770-45C3-BD5C-B794D21AC2E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21CF1E9B-0770-45C3-BD5C-B794D21AC2E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21CF1E9B-0770-45C3-BD5C-B794D21AC2E0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{90AB86B7-BCE5-45FC-A928-202BAA05982F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{90AB86B7-BCE5-45FC-A928-202BAA05982F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{90AB86B7-BCE5-45FC-A928-202BAA05982F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{90AB86B7-BCE5-45FC-A928-202BAA05982F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,7 +33,6 @@ Global
 		{B146FD51-21BF-4DC2-8CE8-77DE458AD795} = {9D983AED-981A-44DA-9402-9DC77A5AE565}
 		{3F30AFA8-8125-44EC-8BD6-B6482A8B3912} = {9D983AED-981A-44DA-9402-9DC77A5AE565}
 		{21CF1E9B-0770-45C3-BD5C-B794D21AC2E0} = {3F30AFA8-8125-44EC-8BD6-B6482A8B3912}
-		{90AB86B7-BCE5-45FC-A928-202BAA05982F} = {3F30AFA8-8125-44EC-8BD6-B6482A8B3912}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3FAE7D1A-E3CD-4869-A551-05958E6CA458}

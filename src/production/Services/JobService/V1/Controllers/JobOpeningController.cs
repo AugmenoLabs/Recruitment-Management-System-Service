@@ -18,13 +18,13 @@ namespace OpenPositionService.V1.Controllers
         [HttpGet]
         public async Task<IActionResult> GetOpenPositions()
         {
-            return Ok(await _context.openPositions.ToListAsync());
+            return Ok(await _context.OpenPositions.ToListAsync());
         }
 
         [HttpPost]
         public async Task<IActionResult> AddOpenPositions(OpenPosition job)
         {
-            _context.openPositions.Add(job);
+            _context.OpenPositions.Add(job);
             await _context.SaveChangesAsync();
             return Created($"/get-job-by-id?id={job.JobId}", job);
         }
@@ -33,7 +33,7 @@ namespace OpenPositionService.V1.Controllers
         [Route("{id:guid}")]
         public async Task<IActionResult> GetOpenPosition([FromRoute] Guid id)
         {
-            var job = await _context.openPositions.FindAsync(id);
+            var job = await _context.OpenPositions.FindAsync(id);
             if (job == null) return NotFound();
             return Ok(job);
         }
@@ -41,7 +41,7 @@ namespace OpenPositionService.V1.Controllers
         [HttpPut]
         public async Task<IActionResult> UpdateOpenPosition(OpenPosition job)
         {
-            _context.openPositions.Update(job);
+            _context.OpenPositions.Update(job);
             await _context.SaveChangesAsync();
             return NoContent();
         }
@@ -50,7 +50,7 @@ namespace OpenPositionService.V1.Controllers
         [Route("{id:guid}")]
         public async Task<IActionResult> DeleteOpenPosition([FromRoute] Guid id)
         {
-            var job = await _context.openPositions.FindAsync(id);
+            var job = await _context.OpenPositions.FindAsync(id);
             if (job != null)
             {
                 _context.Remove(job);

@@ -40,9 +40,5 @@ namespace OpenPositionService.V1.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public string UpdatedBy { get; set; }
 
-
-
-
-
     }
 }
