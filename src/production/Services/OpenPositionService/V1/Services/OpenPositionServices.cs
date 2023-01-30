@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using OpenPositionService.V1.Helpers;
+﻿using OpenPositionService.V1.Helpers;
 using OpenPositionService.V1.Interfaces;
 using OpenPositionService.V1.Models;
 
@@ -12,6 +11,10 @@ namespace OpenPositionService.V1.Services
         public OpenPositionServices(RecruitmentMgmtDbContext context)
         {
             _context = context;
+        }
+
+        public OpenPositionServices()
+        {
         }
 
         public IEnumerable<OpenPosition> GetAllOpenPositions()
