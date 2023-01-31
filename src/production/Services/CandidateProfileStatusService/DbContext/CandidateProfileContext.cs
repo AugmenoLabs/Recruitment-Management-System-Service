@@ -13,7 +13,7 @@ namespace CandidateProfileStatusService
         {
             builder.Entity<CandidateProfile>(entity =>
             {
-                entity.HasIndex(e => e.candidateID).IsUnique();
+                entity.HasIndex(e => e.CandidateID).IsUnique();
             });
         }
 

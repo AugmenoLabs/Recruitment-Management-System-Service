@@ -5,42 +5,42 @@ namespace CandidateProfileStatusService.Models
     public class CandidateProfile
     {
         [Key]
-        public string candidateID { get; set; }
+        public string CandidateID { get; set; }
 
         [Required]
-        public string candidateName { get; set; }
+        public string CandidateName { get; set; }
         
         [Required]
-        public string candidateEmail { get; set; }
+        public string Email { get; set; }
 
         [Required]
-        public string candidateContactNumber { get; set; }
+        public string ContactNumber { get; set; }
 
-        public string candidateCurrenAddress { get; set; }
+        public string CurrenAddress { get; set; }
 
-        public string candidatePermanenetAddress { get; set; }
+        public string PermanenetAddress { get; set; }
 
         [Required]
-        public string gender { get; set; }
+        public string Gender { get; set; }
 
-        public string maritalStatus { get; set; }
+        public string MaritalStatus { get; set; }
 
         [Required]
         public string YearOfExperience { get; set; }
 
         [Required]
-        public string primarySkills { get; set; } 
+        public string PrimarySkills { get; set; } 
         
-        public string secondarySkills { get; set; }
+        public string SecondarySkills { get; set; }
 
         [Required]
-        public long jobID { get; set; }
+        public long JobID { get; set; }
 
-        public string currentCTC { get; set; }
+        public string CurrentCTC { get; set; }
 
-        public string expectedCTC { get; set; }
+        public string ExpectedCTC { get; set; }
 
-        public string noticePeriod { get; set; }
+        public string NoticePeriod { get; set; }
 
     }
 }
