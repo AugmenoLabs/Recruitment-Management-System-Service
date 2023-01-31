@@ -11,7 +11,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{3F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenPositionService", "production\Services\OpenPositionService\OpenPositionService.csproj", "{21CF1E9B-0770-45C3-BD5C-B794D21AC2E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CandidateProfileStatusService", "production\Services\CandidateProfileStatusService\CandidateProfileStatusService.csproj", "{B9EAFC06-2477-41C1-ACE6-6E8059DD8E58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CandidateProfileStatusService", "production\Services\CandidateProfileStatusService\CandidateProfileStatusService.csproj", "{B9EAFC06-2477-41C1-ACE6-6E8059DD8E58}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{9EAD5EE8-8723-4BDE-A7F2-8208B52067A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruitmentManagementSystemDb", "production\Data\RecruitmentManagementSystemDb\RecruitmentManagementSystemDb.csproj", "{66538D58-755A-4D00-8109-C24BC24BAD6B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,10 @@ Global
 		{B9EAFC06-2477-41C1-ACE6-6E8059DD8E58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9EAFC06-2477-41C1-ACE6-6E8059DD8E58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9EAFC06-2477-41C1-ACE6-6E8059DD8E58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66538D58-755A-4D00-8109-C24BC24BAD6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66538D58-755A-4D00-8109-C24BC24BAD6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66538D58-755A-4D00-8109-C24BC24BAD6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66538D58-755A-4D00-8109-C24BC24BAD6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,6 +48,8 @@ Global
 		{3F30AFA8-8125-44EC-8BD6-B6482A8B3912} = {9D983AED-981A-44DA-9402-9DC77A5AE565}
 		{21CF1E9B-0770-45C3-BD5C-B794D21AC2E0} = {3F30AFA8-8125-44EC-8BD6-B6482A8B3912}
 		{B9EAFC06-2477-41C1-ACE6-6E8059DD8E58} = {3F30AFA8-8125-44EC-8BD6-B6482A8B3912}
+		{9EAD5EE8-8723-4BDE-A7F2-8208B52067A5} = {9D983AED-981A-44DA-9402-9DC77A5AE565}
+		{66538D58-755A-4D00-8109-C24BC24BAD6B} = {9EAD5EE8-8723-4BDE-A7F2-8208B52067A5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3FAE7D1A-E3CD-4869-A551-05958E6CA458}
