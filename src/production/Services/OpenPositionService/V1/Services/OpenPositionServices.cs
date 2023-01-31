@@ -1,20 +1,16 @@
 ﻿using OpenPositionService.V1.Helpers;
 using OpenPositionService.V1.Interfaces;
-using OpenPositionService.V1.Models;
+using RecruitmentManagementSystemModels.V1;
 
 namespace OpenPositionService.V1.Services
 {
     public class OpenPositionServices : IOpenPositionService
     {
-        private readonly RecruitmentMgmtDbContext _context;
+        private readonly RecruitmentMgmtSystemDbContext _context;
 
-        public OpenPositionServices(RecruitmentMgmtDbContext context)
+        public OpenPositionServices(RecruitmentMgmtSystemDbContext context)
         {
             _context = context;
-        }
-
-        public OpenPositionServices()
-        {
         }
 
         public IEnumerable<OpenPosition> GetAllOpenPositions()

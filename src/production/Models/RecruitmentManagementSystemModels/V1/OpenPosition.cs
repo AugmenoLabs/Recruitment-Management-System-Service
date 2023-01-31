@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace OpenPositionService.V1.Models
+namespace RecruitmentManagementSystemModels.V1
 {
     public class OpenPosition
     {

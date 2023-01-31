@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CandidateProfileStatusService.Models
+namespace RecruitmentManagementSystemModels.V1
 {
-    public class OfferDetails
+    public class OfferDetail
     {
+        [Key]
         [Required]
         public string CandidateID { get; set; }
 

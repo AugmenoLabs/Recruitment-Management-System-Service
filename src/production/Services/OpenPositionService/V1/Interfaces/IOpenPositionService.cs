@@ -1,4 +1,5 @@
-﻿using OpenPositionService.V1.Models;
+﻿
+using RecruitmentManagementSystemModels.V1;
 
 namespace OpenPositionService.V1.Interfaces
 {

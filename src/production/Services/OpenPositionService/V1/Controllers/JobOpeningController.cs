@@ -1,7 +1,6 @@
-﻿using OpenPositionService.V1.Models;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
 using OpenPositionService.V1.Interfaces;
+using RecruitmentManagementSystemModels.V1;
 
 namespace OpenPositionService.V1.Controllers
 {

@@ -1,5 +1,6 @@
 using CandidateProfileStatusService;
 using Microsoft.EntityFrameworkCore;
+using OpenPositionService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 var connectionStrings = builder.Configuration.GetConnectionString("conString");
-builder.Services.AddDbContext<CandidateProfileContext>(options => options.UseNpgsql(connectionStrings));
+builder.Services.AddDbContext<RecruitmentMgmtSystemDbContext>(options => options.UseNpgsql(connectionStrings));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
