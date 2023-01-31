@@ -1,8 +1,13 @@
+using CandidateProfileStatusService;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+var connectionStrings = builder.Configuration.GetConnectionString("conString");
+builder.Services.AddDbContext<CandidateProfileContext>(options => options.UseNpgsql(connectionStrings));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

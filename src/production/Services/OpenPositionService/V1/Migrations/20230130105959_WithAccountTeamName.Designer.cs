@@ -2,18 +2,21 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using OpenPositionService;
 
 #nullable disable
 
-namespace OpenPositionService.Migrations
+namespace OpenPositionService.V1.Migrations
 {
     [DbContext(typeof(RecruitmentMgmtDbContext))]
-    partial class RecruitmentMgmtDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230130105959_WithAccountTeamName")]
+    partial class WithAccountTeamName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
