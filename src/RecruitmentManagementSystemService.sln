@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{9EAD5EE8-8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruitmentManagementSystemDb", "production\Data\RecruitmentManagementSystemDb\RecruitmentManagementSystemDb.csproj", "{66538D58-755A-4D00-8109-C24BC24BAD6B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{E7CD47EB-3FA3-4C62-87A4-2EB5A92FCB46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruitmentManagementSystemModels", "production\Models\RecruitmentManagementSystemModels\RecruitmentManagementSystemModels.csproj", "{69D28F43-F2DD-4ED6-8A28-075B78CD29FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,10 @@ Global
 		{66538D58-755A-4D00-8109-C24BC24BAD6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66538D58-755A-4D00-8109-C24BC24BAD6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66538D58-755A-4D00-8109-C24BC24BAD6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69D28F43-F2DD-4ED6-8A28-075B78CD29FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69D28F43-F2DD-4ED6-8A28-075B78CD29FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69D28F43-F2DD-4ED6-8A28-075B78CD29FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69D28F43-F2DD-4ED6-8A28-075B78CD29FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +58,8 @@ Global
 		{B9EAFC06-2477-41C1-ACE6-6E8059DD8E58} = {3F30AFA8-8125-44EC-8BD6-B6482A8B3912}
 		{9EAD5EE8-8723-4BDE-A7F2-8208B52067A5} = {9D983AED-981A-44DA-9402-9DC77A5AE565}
 		{66538D58-755A-4D00-8109-C24BC24BAD6B} = {9EAD5EE8-8723-4BDE-A7F2-8208B52067A5}
+		{E7CD47EB-3FA3-4C62-87A4-2EB5A92FCB46} = {9D983AED-981A-44DA-9402-9DC77A5AE565}
+		{69D28F43-F2DD-4ED6-8A28-075B78CD29FD} = {E7CD47EB-3FA3-4C62-87A4-2EB5A92FCB46}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3FAE7D1A-E3CD-4869-A551-05958E6CA458}
