@@ -5,7 +5,7 @@ namespace RecruitmentManagementSystemModels.V1
     public class OfferDetail
     {
         [Key]
-        public int Id { get; set; }
+        public int OfferId { get; set; }
 
         public string CandidateID { get; set; }
 

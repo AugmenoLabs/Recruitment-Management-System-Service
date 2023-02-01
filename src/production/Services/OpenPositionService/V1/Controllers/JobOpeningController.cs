@@ -32,18 +32,11 @@ namespace OpenPositionService.V1.Controllers
         [HttpPost]
         public IActionResult CreateOpenPositions(OpenPosition job)
         {
+            job.JobId = Convert.ToInt64(DateTime.Now.ToString("yyyyMMddHHmmss"));
             _openPositionService.CreateOpenPositions(job);
             return Ok(new { message = "JobPosition Created" });
         }
 
-        //public ActionResult Update(int Studentid)
-        //{
-        //    using (var context = new demoCRUDEntities())
-        //    {
-        //        var data = context.Student.Where(x => x.StudentNo == Studentid).SingleOrDefault();
-        //        return View(data);
-        //    }
-        //}
 
         [HttpPut("{id}")]
         public IActionResult UpdateOpenPosition(long id, OpenPosition job)
@@ -60,4 +53,3 @@ namespace OpenPositionService.V1.Controllers
         }
     }
 }
-//JobId, Title,Location,NoOfOpenings,MinimumExperience,JobDescription,SkillsRequired,PostedOn,PostedBy
