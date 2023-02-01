@@ -35,8 +35,7 @@ namespace RecruitmentManagementSystemModels.V1
 
         public DateTime PostedOn { get; set; }
 
-        public DateTime UpdatedOn { get; set; }
-
+        public DateTime UpdatedOn { get; set; 
 
         public string CreatedBy { get; set; }
 

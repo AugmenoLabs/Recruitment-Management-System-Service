@@ -36,6 +36,15 @@ namespace OpenPositionService.V1.Controllers
             return Ok(new { message = "JobPosition Created" });
         }
 
+        //public ActionResult Update(int Studentid)
+        //{
+        //    using (var context = new demoCRUDEntities())
+        //    {
+        //        var data = context.Student.Where(x => x.StudentNo == Studentid).SingleOrDefault();
+        //        return View(data);
+        //    }
+        //}
+
         [HttpPut("{id}")]
         public IActionResult UpdateOpenPosition(long id, OpenPosition job)
         {

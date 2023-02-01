@@ -1,4 +1,5 @@
-﻿using OpenPositionService.V1.Helpers;
+﻿using Microsoft.AspNetCore.Mvc;
+using OpenPositionService.V1.Helpers;
 using OpenPositionService.V1.Interfaces;
 using RecruitmentManagementSystemModels.V1;
 
@@ -40,10 +41,24 @@ namespace OpenPositionService.V1.Services
 
             if (job.JobId != jobOpening.JobId && _context.OpenPositions.Any(x => x.JobId == job.JobId))
                 throw new AppException("Job With JobId '" + job.JobId + "' already exists");
+
+            jobOpening.JobTitle = job.JobTitle;
+            jobOpening.Location = job.Location;
+            jobOpening.Qualification = job.Qualification;
+            jobOpening.NoOfPositions = job.NoOfPositions;
+            jobOpening.UpdatedOn = job.UpdatedOn;
+            jobOpening.SkillSet = job.SkillSet;
+            jobOpening.UpdatedBy = job.UpdatedBy;
+            jobOpening.CreatedBy = job.CreatedBy;
+            jobOpening.JobDescription = job.JobDescription;
+            jobOpening.SkillSet = job.SkillSet;
+            jobOpening.YearOfExp = job.YearOfExp;
+            jobOpening.PostedOn = job.PostedOn;
+
             _context.OpenPositions.Update(jobOpening);
             _context.SaveChanges();
         }
-
+        //JobId, JobTitle, AccountName, TeamName, SkillSet, YearOfExp, Qualification, JobDescription, NoOfPositions, Location, PostedOn, UpdatedOn, CreatedBy, UpdatedBy
         public void DeleteOpenPosition(long id)
         {
             var jobOpening = getOpenPosition(id);

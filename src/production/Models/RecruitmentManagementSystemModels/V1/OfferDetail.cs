@@ -6,6 +6,7 @@ namespace RecruitmentManagementSystemModels.V1
     {
         [Key]
         public int Id { get; set; }
+
         public string CandidateID { get; set; }
 
         [Required]
