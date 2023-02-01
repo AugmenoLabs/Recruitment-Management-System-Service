@@ -15,13 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CandidateProfileStatusServi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{9EAD5EE8-8723-4BDE-A7F2-8208B52067A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruitmentManagementSystemDb", "production\Data\RecruitmentManagementSystemDb\RecruitmentManagementSystemDb.csproj", "{66538D58-755A-4D00-8109-C24BC24BAD6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitmentManagementSystemDb", "production\Data\RecruitmentManagementSystemDb\RecruitmentManagementSystemDb.csproj", "{66538D58-755A-4D00-8109-C24BC24BAD6B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{E7CD47EB-3FA3-4C62-87A4-2EB5A92FCB46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruitmentManagementSystemModels", "production\Models\RecruitmentManagementSystemModels\RecruitmentManagementSystemModels.csproj", "{69D28F43-F2DD-4ED6-8A28-075B78CD29FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitmentManagementSystemModels", "production\Models\RecruitmentManagementSystemModels\RecruitmentManagementSystemModels.csproj", "{69D28F43-F2DD-4ED6-8A28-075B78CD29FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountManagementService", "production\Services\AccountManagementService\AccountManagementService.csproj", "{CE777F4E-7940-4BE6-9A92-490491D448EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountManagementService", "production\Services\AccountManagementService\AccountManagementService.csproj", "{CE777F4E-7940-4BE6-9A92-490491D448EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

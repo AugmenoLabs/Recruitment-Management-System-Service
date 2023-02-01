@@ -9,14 +9,12 @@ namespace RecruitmentManagementSystemModels.V1
         [Required]
         public string ProjectID { get; set; }
 
-
         [Required]
         public string ProjectName { get; set; }
 
         public string ProjectDetails { get; set; }
 
         public string ProjectManager { get; set; }
-
 
         [Required]
         public string AccountID { get; set; }
