@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using OpenPositionService.V1.Helpers;
+﻿using OpenPositionService.V1.Helpers;
 using OpenPositionService.V1.Interfaces;
 using RecruitmentManagementSystemModels.V1;
 
@@ -72,5 +71,7 @@ namespace OpenPositionService.V1.Services
             if (openPosition == null) throw new KeyNotFoundException("Open Position Not Found");
             return openPosition;
         }
+
+       
     }
 }

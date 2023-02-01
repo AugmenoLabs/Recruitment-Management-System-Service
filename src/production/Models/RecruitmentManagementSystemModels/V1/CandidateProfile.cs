@@ -5,7 +5,6 @@ namespace RecruitmentManagementSystemModels.V1
     public class CandidateProfile
     {
         [Key]
-        [Required]
         public string CandidateID { get; set; }
 
         [Required]

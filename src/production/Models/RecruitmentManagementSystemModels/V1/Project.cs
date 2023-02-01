@@ -6,7 +6,6 @@ namespace RecruitmentManagementSystemModels.V1
     public class Project
     {
         [Key]
-        [Required]
         public string ProjectID { get; set; }
 
         [Required]

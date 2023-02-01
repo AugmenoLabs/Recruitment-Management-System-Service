@@ -1,6 +1,6 @@
 ﻿using RecruitmentManagementSystemModels.V1;
 
-namespace CandidateProfileStatusService.v1.Interfaces
+namespace CandidateProfileStatusService.V1.Interfaces
 {
     public interface ICandidateProfileStatusService
     {

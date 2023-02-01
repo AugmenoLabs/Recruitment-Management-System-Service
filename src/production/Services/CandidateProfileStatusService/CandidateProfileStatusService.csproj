@@ -7,31 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Interfaces\**" />
-    <Compile Remove="Services\**" />
-    <Content Remove="Interfaces\**" />
-    <Content Remove="Services\**" />
-    <EmbeddedResource Remove="Interfaces\**" />
-    <EmbeddedResource Remove="Services\**" />
-    <None Remove="Interfaces\**" />
-    <None Remove="Services\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.2">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.2">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Data\RecruitmentManagementSystemDb\RecruitmentManagementSystemDb.csproj" />
-    <ProjectReference Include="..\..\Models\RecruitmentManagementSystemModels\RecruitmentManagementSystemModels.csproj" />
   </ItemGroup>
 
 </Project>
