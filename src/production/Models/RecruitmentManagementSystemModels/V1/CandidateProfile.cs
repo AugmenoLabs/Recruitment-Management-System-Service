@@ -43,5 +43,7 @@ namespace RecruitmentManagementSystemModels.V1
 
         public string NoticePeriod { get; set; }
 
+        public bool HasOfferLetter { get; set; }
+
     }
 }
