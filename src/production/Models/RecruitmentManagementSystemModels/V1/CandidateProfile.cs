@@ -15,9 +15,9 @@ namespace RecruitmentManagementSystemModels.V1
         public string Email { get; set; }
 
         [Required]
-        public string ContactNumber { get; set; }
+        public long ContactNumber { get; set; }
 
-        public string CurrenAddress { get; set; }
+        public string ResidentialAddress { get; set; }
 
         public string PermanenetAddress { get; set; }
 

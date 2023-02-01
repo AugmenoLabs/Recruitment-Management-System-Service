@@ -5,13 +5,13 @@ namespace RecruitmentManagementSystemModels.V1
     public class OfferDetail
     {
         [Key]
-        [Required]
+        public int Id { get; set; }
         public string CandidateID { get; set; }
 
         [Required]
         public string JobID { get; set; }
 
-        public string OfferedCompanyName { get; set; }
+        public string CompanyName { get; set; }
 
         [Required]
         public DateTime DateOfJoining { get; set; }

@@ -12,9 +12,9 @@ namespace RecruitmentManagementSystemModels.V1
 
         public string JobTitle { get; set; }
 
-        public string AccountName { get; set; }
+        public Account Account { get; set; }
 
-        public string TeamName { get; set; }
+        public Project Project { get; set; }
 
         [Required]
         public string SkillSet { get; set; }

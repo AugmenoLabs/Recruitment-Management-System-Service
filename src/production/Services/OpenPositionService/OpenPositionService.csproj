@@ -25,6 +25,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Data\RecruitmentManagementSystemDb\RecruitmentManagementSystemDb.csproj" />
     <ProjectReference Include="..\..\Models\RecruitmentManagementSystemModels\RecruitmentManagementSystemModels.csproj" />
+    <ProjectReference Include="..\CandidateProfileStatusService\CandidateProfileStatusService.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
-using CandidateProfileStatusService;
+using CandidateProfileStatusService.v1.Services;
+using CandidateProfileStatusService.v1.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using OpenPositionService;
 
@@ -12,6 +13,7 @@ builder.Services.AddDbContext<RecruitmentMgmtSystemDbContext>(options => options
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<ICandidateProfileStatusService,CandidateProfileStatusServices>();
 
 var app = builder.Build();
 
