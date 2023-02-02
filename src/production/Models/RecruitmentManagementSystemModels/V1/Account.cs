@@ -3,7 +3,7 @@
 
 namespace RecruitmentManagementSystemModels.V1
 {
-    public class Account
+    public class Account: BaseClass
     {
         [Key]
         public string AccountId { get; set; }

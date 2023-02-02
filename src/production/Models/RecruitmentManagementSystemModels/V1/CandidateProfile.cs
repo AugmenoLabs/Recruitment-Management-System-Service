@@ -2,14 +2,14 @@
 
 namespace RecruitmentManagementSystemModels.V1
 {
-    public class CandidateProfile
+    public class CandidateProfile : BaseClass
     {
         [Key]
         public string CandidateId { get; set; }
 
         [Required]
         public string CandidateName { get; set; }
-        
+
         [Required]
         public string Email { get; set; }
 
@@ -29,16 +29,16 @@ namespace RecruitmentManagementSystemModels.V1
         public int YearOfExperience { get; set; }
 
         [Required]
-        public string PrimarySkills { get; set; } 
-        
+        public string PrimarySkills { get; set; }
+
         public string SecondarySkills { get; set; }
 
         [Required]
-        public long JobID { get; set; }
+        public long JobId { get; set; }
 
-        public string CurrentCTC { get; set; }
+        public long CurrentCTC { get; set; }
 
-        public string ExpectedCTC { get; set; }
+        public long ExpectedCTC { get; set; }
 
         public string NoticePeriod { get; set; }
 

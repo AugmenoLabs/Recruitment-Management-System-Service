@@ -20,23 +20,23 @@ namespace OpenPositionService.V1.Services
 
         public OpenPosition GetOpenPositionById(long id)
         {
-            return getOpenPosition(id);
+            return GetOpenPosition(id);
         }
 
         public void CreateOpenPositions(OpenPosition job)
         {
             //Validate
-            if(_context.OpenPositions.Any(x => x.JobId == job.JobId))
+            if (_context.OpenPositions.Any(x => x.JobId == job.JobId))
             {
                 throw new AppException("Job With JobId '" + job.JobId + "' already exists");
             }
             _context.OpenPositions.Add(job);
             _context.SaveChanges();
         }
-        
+
         public void UpdateOpenPositions(long id, OpenPosition job)
         {
-            var jobOpening = getOpenPosition(id);
+            var jobOpening = GetOpenPosition(id);
 
             if (job.JobId != jobOpening.JobId && _context.OpenPositions.Any(x => x.JobId == job.JobId))
                 throw new AppException("Job With JobId '" + job.JobId + "' already exists");
@@ -60,18 +60,18 @@ namespace OpenPositionService.V1.Services
         //JobId, JobTitle, AccountName, TeamName, SkillSet, YearOfExp, Qualification, JobDescription, NoOfPositions, Location, PostedOn, UpdatedOn, CreatedBy, UpdatedBy
         public void DeleteOpenPosition(long id)
         {
-            var jobOpening = getOpenPosition(id);
+            var jobOpening = GetOpenPosition(id);
             _context.OpenPositions.Remove(jobOpening);
             _context.SaveChanges();
         }
 
-        private OpenPosition getOpenPosition(long id)
+        private OpenPosition GetOpenPosition(long id)
         {
             var openPosition = _context.OpenPositions.Find(id);
             if (openPosition == null) throw new KeyNotFoundException("Open Position Not Found");
             return openPosition;
         }
 
-       
+
     }
 }

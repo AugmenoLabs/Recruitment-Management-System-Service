@@ -12,9 +12,9 @@ namespace RecruitmentManagementSystemModels.V1
 
         public string JobTitle { get; set; }
 
-        public Account Account { get; set; }
+        public string AccountId { get; set; }
 
-        public Project Project { get; set; }
+        public string ProjectId { get; set; }
 
         [Required]
         public string SkillSet { get; set; }
@@ -32,14 +32,6 @@ namespace RecruitmentManagementSystemModels.V1
 
         //County-State-City
         public string? Location { get; set; }
-
-        //public DateTime PostedOn { get; set; }
-
-        //public DateTime UpdatedOn { get; set; } 
-
-        //public string CreatedBy { get; set; }
-
-        //public string UpdatedBy { get; set; }
 
     }
 }

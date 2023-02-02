@@ -3,19 +3,20 @@
 
 namespace RecruitmentManagementSystemModels.V1
 {
-    public class Project
+    public class Project: BaseClass
     {
         [Key]
-        public string ProjectID { get; set; }
+        public string ProjectId { get; set; }
 
         [Required]
         public string ProjectName { get; set; }
 
         public string ProjectDetails { get; set; }
 
+        [Required]
         public string ProjectManager { get; set; }
 
         [Required]
-        public string AccountID { get; set; }
+        public string AccountId { get; set; }
     }
 }
