@@ -52,7 +52,7 @@ namespace OpenPositionService.V1.Services
             jobOpening.JobDescription = job.JobDescription;
             jobOpening.SkillSet = job.SkillSet;
             jobOpening.YearOfExp = job.YearOfExp;
-            jobOpening.PostedOn = job.PostedOn;
+           // jobOpening.PostedOn = job.PostedOn;
 
             _context.OpenPositions.Update(jobOpening);
             _context.SaveChanges();

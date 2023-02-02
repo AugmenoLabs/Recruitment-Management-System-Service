@@ -24,7 +24,7 @@ namespace CandidateProfileStatusService.V1.Services
         }
         public void CreateCandidateProfile(CandidateProfile Candidate)
         {
-            if(_context.CandidateProfiles.Any(x => x.CandidateID == Candidate.CandidateID))
+            if(_context.CandidateProfiles.Any(x => x.CandidateId == Candidate.CandidateId))
             {
                // throw new AppException("Candidate with Candidate Id '"+ Candidate.CandidateID +"'already exists");
             }
