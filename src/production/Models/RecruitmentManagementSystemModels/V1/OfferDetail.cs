@@ -7,10 +7,10 @@ namespace RecruitmentManagementSystemModels.V1
         [Key]
         public int OfferId { get; set; }
 
-        public string CandidateID { get; set; }
+        public string CandidateId { get; set; }
 
         [Required]
-        public string JobID { get; set; }
+        public long JobId { get; set; }
 
         public string CompanyName { get; set; }
 

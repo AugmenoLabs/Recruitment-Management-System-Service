@@ -5,7 +5,7 @@ namespace RecruitmentManagementSystemModels.V1
     public class CandidateProfile
     {
         [Key]
-        public string CandidateID { get; set; }
+        public string CandidateId { get; set; }
 
         [Required]
         public string CandidateName { get; set; }
@@ -26,7 +26,7 @@ namespace RecruitmentManagementSystemModels.V1
         public string MaritalStatus { get; set; }
 
         [Required]
-        public string YearOfExperience { get; set; }
+        public int YearOfExperience { get; set; }
 
         [Required]
         public string PrimarySkills { get; set; } 

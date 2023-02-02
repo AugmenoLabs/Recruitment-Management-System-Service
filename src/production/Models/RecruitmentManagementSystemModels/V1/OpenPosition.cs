@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RecruitmentManagementSystemModels.V1
 {
-    public class OpenPosition
+    public class OpenPosition : BaseClass
     {
 
         [Key]
@@ -33,13 +33,13 @@ namespace RecruitmentManagementSystemModels.V1
         //County-State-City
         public string? Location { get; set; }
 
-        public DateTime PostedOn { get; set; }
+        //public DateTime PostedOn { get; set; }
 
-        public DateTime UpdatedOn { get; set; } 
+        //public DateTime UpdatedOn { get; set; } 
 
-        public string CreatedBy { get; set; }
+        //public string CreatedBy { get; set; }
 
-        public string UpdatedBy { get; set; }
+        //public string UpdatedBy { get; set; }
 
     }
 }
