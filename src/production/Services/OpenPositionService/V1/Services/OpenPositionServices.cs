@@ -1,6 +1,6 @@
-﻿using OpenPositionService.V1.Helpers;
-using OpenPositionService.V1.Interfaces;
+﻿using OpenPositionService.V1.Interfaces;
 using RecruitmentManagementSystemModels.V1;
+using OpenPositionService.V1.Helpers;
 
 namespace OpenPositionService.V1.Services
 {

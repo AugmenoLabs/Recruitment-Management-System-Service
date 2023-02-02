@@ -1,7 +1,9 @@
-﻿using CandidateProfileStatusService.V1.Interfaces;
+﻿//using RecruitmentManagementSystemDb.Helper;
+using CandidateProfileStatusService.V1.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using OpenPositionService;
 using RecruitmentManagementSystemModels.V1;
+using OpenPositionService.V1.Helpers;
 
 namespace CandidateProfileStatusService.V1.Services
 {
@@ -26,7 +28,7 @@ namespace CandidateProfileStatusService.V1.Services
         {
             if(_context.CandidateProfiles.Any(x => x.CandidateId == Candidate.CandidateId))
             {
-               // throw new AppException("Candidate with Candidate Id '"+ Candidate.CandidateID +"'already exists");
+               throw new AppException("Candidate with Candidate Id '"+ Candidate.CandidateId +"'already exists");
             }
             _context.CandidateProfiles.Add(Candidate);
             _context.SaveChanges();
@@ -35,7 +37,7 @@ namespace CandidateProfileStatusService.V1.Services
         {
             var candidateProfile = getCandidateProfile(id);
             if ( candidateProfile == null ){
-                //throw new AppException("Candidate With CandidateId '" + Candidate.CandidateID + "' already exists");
+                throw new AppException("Candidate With CandidateId '" + Candidate.CandidateId + "' already exists");
             }
 
             _context.Entry(candidateProfile).State = EntityState.Modified;
@@ -54,9 +56,6 @@ namespace CandidateProfileStatusService.V1.Services
             if (candidateprofile == null) throw new KeyNotFoundException("Candidate Not Found");
             return candidateprofile;
         }
-
-
-
 
 
     }
