@@ -1,10 +1,24 @@
-﻿namespace RecruitmentManagementSystemModels.V1
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+
+
+namespace RecruitmentManagementSystemModels.V1
 {
     public class ProfileStatus
     {
-        public string CandidateId { get; set; }
+        public long Id { get; set; }
 
-        public long JobId { get; set; }
+        [Display(Name = "CandidateProfile")]
+        public virtual string CandidateId { get; set; }
+
+        [ForeignKey("CandidateId")]
+        public virtual CandidateProfile CandidateProfiles { get; set; }
+
+        [Display(Name = "OpenPosition")]
+        public virtual long JobId { get; set; }
+
+        [ForeignKey("JobId")]
+        public virtual OpenPosition OpenPositions { get; set; }
 
         public string InterviewStatus { get; set; } //Pending, Assigned, Done
 

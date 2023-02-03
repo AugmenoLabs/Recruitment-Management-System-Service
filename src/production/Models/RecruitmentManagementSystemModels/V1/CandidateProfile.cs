@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RecruitmentManagementSystemModels.V1
 {
@@ -33,8 +34,19 @@ namespace RecruitmentManagementSystemModels.V1
 
         public string SecondarySkills { get; set; }
 
-        [Required]
-        public long JobId { get; set; }
+        public string Qualification { get; set; }
+
+        [Display(Name = "OpenPosition")]
+        public virtual long JobId { get; set; }
+
+        [ForeignKey("JobId")]
+        public virtual OpenPosition OpenPositions { get; set; }
+
+        [Display(Name ="Vendor")]
+        public virtual long VendorId { get; set; }
+
+        [ForeignKey("VendorId")]
+        public virtual Vendor Vendors { get; set; }
 
         public long CurrentCTC { get; set; }
 

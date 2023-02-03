@@ -12,9 +12,17 @@ namespace RecruitmentManagementSystemModels.V1
 
         public string JobTitle { get; set; }
 
-        public string AccountId { get; set; }
+        [Display(Name ="Account")]
+        public virtual string AccountId { get; set; }
 
-        public string ProjectId { get; set; }
+        [ForeignKey("AccountId")]
+        public virtual Account Accounts { get; set; }
+
+        [Display(Name = "Project")]
+        public virtual string ProjectId { get; set; }
+
+        [ForeignKey("ProjectId")]
+        public virtual Project Projects { get; set; }    
 
         [Required]
         public string SkillSet { get; set; }
