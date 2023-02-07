@@ -8,8 +8,8 @@ namespace RecruitmentManagementSystemModels.V1
         [Key]
         public Guid OfferId { get; set; }
 
-        [Display(Name ="CandidateProfile")]
-        public virtual string CandidateId { get; set; }
+        [Display(Name = "CandidateProfile")]
+        public virtual Guid CandidateId { get; set; }
 
         [ForeignKey("CandidateId")]
         public virtual CandidateProfile CandidateProfile { get; set; }

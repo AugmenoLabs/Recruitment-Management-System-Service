@@ -6,7 +6,7 @@ namespace RecruitmentManagementSystemModels.V1
     public class CandidateProfile : BaseClass
     {
         [Key]
-        public string CandidateId { get; set; }
+        public Guid CandidateId { get; set; }
 
         [Required]
         public string CandidateName { get; set; }
@@ -43,7 +43,7 @@ namespace RecruitmentManagementSystemModels.V1
         public virtual OpenPosition OpenPosition { get; set; }
 
         [Display(Name ="Vendor")]
-        public virtual long VendorId { get; set; }
+        public virtual Guid VendorId { get; set; }
 
         [ForeignKey("VendorId")]
         public virtual Vendor Vendor { get; set; }

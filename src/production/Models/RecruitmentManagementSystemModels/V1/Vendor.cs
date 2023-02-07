@@ -6,9 +6,9 @@ namespace RecruitmentManagementSystemModels.V1
     public class Vendor : BaseClass
     {
         [Key]
-        public long VendorId { get; set; }
+        public Guid VendorId { get; set; }
 
-        
+
         public string VendorName { get; set; }
 
         [Required]
