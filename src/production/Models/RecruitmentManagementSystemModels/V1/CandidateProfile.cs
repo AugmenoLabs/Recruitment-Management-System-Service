@@ -37,9 +37,9 @@ namespace RecruitmentManagementSystemModels.V1
         public string Qualification { get; set; }
 
         [Display(Name = "OpenPosition")]
-        public virtual long JobId { get; set; }
+        public virtual Guid Id { get; set; }
 
-        [ForeignKey("JobId")]
+        [ForeignKey("Id")]
         public virtual OpenPosition OpenPosition { get; set; }
 
         [Display(Name ="Vendor")]

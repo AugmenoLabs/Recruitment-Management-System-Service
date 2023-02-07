@@ -19,7 +19,7 @@ namespace AccountManagementService.V1.Service
             return _context.Accounts;
         }
 
-        public Account GetAccountById(string id)
+        public Account GetAccountById(Guid id)
         {
             return GetAccount(id);
         }
@@ -35,7 +35,7 @@ namespace AccountManagementService.V1.Service
             _context.SaveChanges();
         }
 
-        public void UpdateAccounts(string id, Account account)
+        public void UpdateAccounts(Guid id, Account account)
         {
             var acc = GetAccount(id);
 
@@ -45,20 +45,20 @@ namespace AccountManagementService.V1.Service
             acc.AccountId = account.AccountId;
             acc.AccountManager = account.AccountManager;
             acc.AccountName = account.AccountName;
-            acc.AccountDetails = account.AccountDetails;
+            acc.AccountDetail = account.AccountDetail;
             _context.Accounts.Update(acc);
             _context.SaveChanges();
         }
 
 
-        public void DeleteAccount(string id)
+        public void DeleteAccount(Guid id)
         {
             var acc = GetAccount(id);
             _context.Accounts.Remove(acc);
             _context.SaveChanges();
         }
 
-        private Account GetAccount(string id)
+        private Account GetAccount(Guid id)
         {
             var account = _context.Accounts.Find(id);
             if (account == null) throw new KeyNotFoundException("Account Not Found");

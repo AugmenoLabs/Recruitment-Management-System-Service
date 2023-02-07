@@ -6,7 +6,7 @@ namespace RecruitmentManagementSystemModels.V1
     public class OfferDetail
     {
         [Key]
-        public int OfferId { get; set; }
+        public Guid OfferId { get; set; }
 
         [Display(Name ="CandidateProfile")]
         public virtual string CandidateId { get; set; }
@@ -15,9 +15,9 @@ namespace RecruitmentManagementSystemModels.V1
         public virtual CandidateProfile CandidateProfile { get; set; }
 
         [Display(Name = "OpenPosition")]
-        public virtual long JobId { get; set; }
+        public virtual Guid Id { get; set; }
 
-        [ForeignKey("JobId")]
+        [ForeignKey("Id")]
         public virtual OpenPosition OpenPosition { get; set; }
 
         [Required]

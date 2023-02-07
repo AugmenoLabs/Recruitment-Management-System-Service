@@ -20,15 +20,15 @@ namespace AccountManagementService.V1.Controller
         [HttpGet]
         public IActionResult GetAllProjects()
         {
-            var accounts = _projectService.GetAllProjects();
-            return Ok(accounts);
+            var projects = _projectService.GetAllProjects();
+            return Ok(projects);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetProjectById(string id)
+        public IActionResult GetProjectById(Guid id)
         {
-            var account = _projectService.GetProjectById(id);
-            return Ok(account);
+            var projects = _projectService.GetProjectById(id);
+            return Ok(projects);
         }
 
         [HttpPost]
@@ -39,14 +39,14 @@ namespace AccountManagementService.V1.Controller
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateProject(string str, Project project)
+        public IActionResult UpdateProject(Guid id, Project project)
         {
-            _projectService.UpdateProjects(str, project);
+            _projectService.UpdateProjects(id, project);
             return Ok(new { message = "Project Updated" });
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteProject(string id)
+        public IActionResult DeleteProject(Guid id)
         {
             _projectService.DeleteProject(id);
             return Ok(new { message = "Project Deleted" });

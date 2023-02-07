@@ -23,7 +23,7 @@ namespace AccountManagementService.V1.Controller
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetAccountById(string id)
+        public IActionResult GetAccountById(Guid id)
         {
             var account = _accountService.GetAccountById(id);
             return Ok(account);
@@ -37,14 +37,14 @@ namespace AccountManagementService.V1.Controller
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateAccount(string str, Account account)
+        public IActionResult UpdateAccount(Guid id, Account account)
         {
-            _accountService.UpdateAccounts(str, account);
+            _accountService.UpdateAccounts(id, account);
             return Ok(new { message = "Account Updated" });
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteAccount(string id)
+        public IActionResult DeleteAccount(Guid id)
         {
             _accountService.DeleteAccount(id);
             return Ok(new { message = "Account Deleted" });

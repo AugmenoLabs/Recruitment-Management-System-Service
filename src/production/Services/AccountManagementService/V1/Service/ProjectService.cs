@@ -19,7 +19,7 @@ namespace AccountManagementService.V1.Service
             return _context.Projects;
         }
 
-        public Project GetProjectById(string id)
+        public Project GetProjectById(Guid id)
         {
             return GetProject(id);
         }
@@ -35,7 +35,7 @@ namespace AccountManagementService.V1.Service
             _context.SaveChanges();
         }
 
-        public void UpdateProjects(string id, Project project)
+        public void UpdateProjects(Guid id, Project project)
         {
             var proj = GetProject(id);
 
@@ -52,14 +52,14 @@ namespace AccountManagementService.V1.Service
         }
 
 
-        public void DeleteProject(string id)
+        public void DeleteProject(Guid id)
         {
             var acc = GetProject(id);
             _context.Projects.Remove(acc);
             _context.SaveChanges();
         }
 
-        private Project GetProject(string id)
+        private Project GetProject(Guid id)
         {
             var project = _context.Projects.Find(id);
             if (project == null) throw new KeyNotFoundException("Project Not Found");

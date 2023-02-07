@@ -6,7 +6,7 @@ namespace RecruitmentManagementSystemModels.V1
     public class Project: BaseClass
     {
         [Key]
-        public string ProjectId { get; set; }
+        public Guid ProjectId { get; set; }
 
         [Required]
         public string ProjectName { get; set; }
@@ -17,7 +17,7 @@ namespace RecruitmentManagementSystemModels.V1
         public string ProjectManager { get; set; }
 
         [Display(Name = "Account")]
-        public virtual string AccountId { get; set; }
+        public virtual Guid AccountId { get; set; }
 
         [ForeignKey("AccountId")]
         public virtual Account Account { get; set; }

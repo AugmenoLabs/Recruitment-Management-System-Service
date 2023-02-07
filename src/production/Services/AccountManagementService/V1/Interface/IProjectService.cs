@@ -5,9 +5,9 @@ namespace AccountManagementService.V1.Interface
     public interface IProjectService
     { 
         IEnumerable<Project> GetAllProjects();
-        Project GetProjectById(string id);
+        Project GetProjectById(Guid id);
         void CreateProjects(Project project);
-        void UpdateProjects(string id, Project project);
-        void DeleteProject(string id);
+        void UpdateProjects(Guid id, Project project);
+        void DeleteProject(Guid id);
     }
 }

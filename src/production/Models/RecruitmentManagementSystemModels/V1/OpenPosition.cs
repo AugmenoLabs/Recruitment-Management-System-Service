@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RecruitmentManagementSystemModels.V1
@@ -15,13 +15,13 @@ namespace RecruitmentManagementSystemModels.V1
         public string JobTitle { get; set; }
 
         [Display(Name ="Account")]
-        public virtual string AccountId { get; set; }
+        public virtual Guid AccountId { get; set; }
 
         [ForeignKey("AccountId")]
         public virtual Account Account { get; set; }
 
         [Display(Name = "Project")]
-        public virtual string ProjectId { get; set; }
+        public virtual Guid ProjectId { get; set; }
 
         [ForeignKey("ProjectId")]
         public virtual Project Project { get; set; }    
