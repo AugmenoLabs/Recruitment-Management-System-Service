@@ -40,13 +40,13 @@ namespace RecruitmentManagementSystemModels.V1
         public virtual long JobId { get; set; }
 
         [ForeignKey("JobId")]
-        public virtual OpenPosition OpenPositions { get; set; }
+        public virtual OpenPosition OpenPosition { get; set; }
 
         [Display(Name ="Vendor")]
         public virtual long VendorId { get; set; }
 
         [ForeignKey("VendorId")]
-        public virtual Vendor Vendors { get; set; }
+        public virtual Vendor Vendor { get; set; }
 
         public long CurrentCTC { get; set; }
 

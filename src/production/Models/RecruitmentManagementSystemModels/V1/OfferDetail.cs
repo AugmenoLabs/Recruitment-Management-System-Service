@@ -12,13 +12,13 @@ namespace RecruitmentManagementSystemModels.V1
         public virtual string CandidateId { get; set; }
 
         [ForeignKey("CandidateId")]
-        public virtual CandidateProfile CandidateProfiles { get; set; }
+        public virtual CandidateProfile CandidateProfile { get; set; }
 
         [Display(Name = "OpenPosition")]
         public virtual long JobId { get; set; }
 
         [ForeignKey("JobId")]
-        public virtual OpenPosition OpenPositions { get; set; }
+        public virtual OpenPosition OpenPosition { get; set; }
 
         [Required]
         public string CompanyName { get; set; }

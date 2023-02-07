@@ -20,6 +20,6 @@ namespace RecruitmentManagementSystemModels.V1
         public virtual string AccountId { get; set; }
 
         [ForeignKey("AccountId")]
-        public virtual Account Accounts { get; set; }
+        public virtual Account Account { get; set; }
     }
 }

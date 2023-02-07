@@ -7,7 +7,9 @@ namespace RecruitmentManagementSystemModels.V1
     {
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public Guid Id { get; set; }
+
+        [Required]
         public long JobId { get; set; }
 
         public string JobTitle { get; set; }
@@ -16,13 +18,13 @@ namespace RecruitmentManagementSystemModels.V1
         public virtual string AccountId { get; set; }
 
         [ForeignKey("AccountId")]
-        public virtual Account Accounts { get; set; }
+        public virtual Account Account { get; set; }
 
         [Display(Name = "Project")]
         public virtual string ProjectId { get; set; }
 
         [ForeignKey("ProjectId")]
-        public virtual Project Projects { get; set; }    
+        public virtual Project Project { get; set; }    
 
         [Required]
         public string SkillSet { get; set; }
