@@ -1,8 +1,8 @@
-﻿using CandidateProfileStatusService.v1.Interfaces;
+﻿using CandidateProfileStatusService.V1.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using RecruitmentManagementSystemModels.V1;
 
-namespace CandidateProfileStatusService.v1.Controller
+namespace CandidateProfileStatusService.V1.Controller
 {
     [Route("api/[controller]")]
     [ApiController]

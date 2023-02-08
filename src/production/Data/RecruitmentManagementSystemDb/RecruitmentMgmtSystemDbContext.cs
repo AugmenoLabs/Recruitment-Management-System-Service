@@ -25,6 +25,10 @@ namespace OpenPositionService
 
         public DbSet<OfferDetail> OfferDetails { get; set; }
 
+        public DbSet<Account> Accounts { get; set; }
+
+        public DbSet<Project> Projects { get; set; }
+
     }
 
 }

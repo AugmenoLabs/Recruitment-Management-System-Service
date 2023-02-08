@@ -1,7 +1,10 @@
-﻿using System.Net;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
+using OpenPositionService.V1.Helpers;
+using System.Net;
 using System.Text.Json;
 
-namespace OpenPositionService.V1.Helpers
+namespace Data.Helpers
 {
     public class ErrorHandlerMiddleware
     {

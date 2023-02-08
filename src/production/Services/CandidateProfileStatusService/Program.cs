@@ -1,7 +1,7 @@
-using CandidateProfileStatusService.v1.Services;
-using CandidateProfileStatusService.v1.Interfaces;
-using Microsoft.EntityFrameworkCore;
+using CandidateProfileStatusService.V1.Services;
+using CandidateProfileStatusService.V1.Interfaces;
 using OpenPositionService;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 

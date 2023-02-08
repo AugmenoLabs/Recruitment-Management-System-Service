@@ -3,15 +3,15 @@
 
 namespace RecruitmentManagementSystemModels.V1
 {
-    public class Account
+    public class Account: BaseClass
     {
         [Key]
-        public string AccountID { get; set; }
+        public Guid AccountId { get; set; }
 
         [Required]
         public string AccountName { get; set; }
 
-        public string AccountDetails { get; set; }
+        public string AccountDetail { get; set; }
 
         public string AccountManager { get; set; }
     }

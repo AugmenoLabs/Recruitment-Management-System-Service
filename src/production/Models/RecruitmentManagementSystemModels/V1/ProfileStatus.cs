@@ -1,16 +1,30 @@
-﻿namespace RecruitmentManagementSystemModels.V1
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+
+
+namespace RecruitmentManagementSystemModels.V1
 {
     public class ProfileStatus
     {
-        public string CandidateId { get; set; }
+        public Guid ProfileStatusId { get; set; }
 
-        public long JobID { get; set; }
+        [Display(Name = "CandidateProfile")]
+        public virtual string CandidateId { get; set; }
+
+        [ForeignKey("CandidateId")]
+        public virtual CandidateProfile CandidateProfile { get; set; }
+
+        [Display(Name = "OpenPosition")]
+        public virtual Guid Id { get; set; }
+
+        [ForeignKey("Id")]
+        public virtual OpenPosition OpenPosition { get; set; }
 
         public string InterviewStatus { get; set; } //Pending, Assigned, Done
 
         public string InterviewRound { get; set; } //1st Techincal, 2nd Technical or HR 
 
-        public string InterviewerAssigned { get; set; } //Name of the person going to take interview
+        public string Interviewer { get; set; } //Name of the person going to take interview
 
         public string CandidateContactNumber { get; set; }
     }

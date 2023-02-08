@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="V1\Migrations\**" />
+    <Content Remove="V1\Migrations\**" />
+    <EmbeddedResource Remove="V1\Migrations\**" />
+    <None Remove="V1\Migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -25,7 +33,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Data\RecruitmentManagementSystemDb\RecruitmentManagementSystemDb.csproj" />
     <ProjectReference Include="..\..\Models\RecruitmentManagementSystemModels\RecruitmentManagementSystemModels.csproj" />
-    <ProjectReference Include="..\CandidateProfileStatusService\CandidateProfileStatusService.csproj" />
   </ItemGroup>
 
 </Project>
